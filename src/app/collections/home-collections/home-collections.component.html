@@ -1,0 +1,33 @@
+<app-header-divider>
+    Table
+</app-header-divider>
+<app-table 
+    [headers]="headers" 
+    [data]="data"
+    class="celled striped">
+</app-table>
+
+<app-header-divider>
+    Tab
+</app-header-divider>
+<app-tab>
+    <a 
+        [routerLink]="['./']" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}"
+        class="item">
+        Biography
+    </a>
+    <a 
+        [routerLink]="['./companies']"
+        routerLinkActive="active"  
+        class="item">
+        Companies
+    </a>
+    <a 
+        [routerLink]="['./partners']" 
+        routerLinkActive="active" 
+        class="item">
+        Partners
+    </a>
+</app-tab>

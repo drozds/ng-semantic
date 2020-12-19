@@ -1,0 +1,22 @@
+<app-header-divider>
+    Modal
+</app-header-divider>
+
+<button class="ui button" (click)="onOpenModalClick()">Open modal</button>
+<app-modal (close)="onOpenModalClick()" *ngIf="openModal">
+    <div modalHeader class="header">
+      I am modal title!
+    </div>
+    <p modalContent>
+        I am modal content!
+    </p>
+    <ng-container modalCloseBtn>
+        <button (click)="onOpenModalClick()" class="ui button">I am close button</button>
+    </ng-container>
+</app-modal>
+
+<app-header-divider>
+    Accordion
+</app-header-divider>
+
+<app-accordion [items]="items"></app-accordion>
